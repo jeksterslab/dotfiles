@@ -59,7 +59,8 @@ detritus
 latexmkrc
 
 # make
-# Makefile # diff
+# diff
+# Makefile
 make-*
 .secrets
 .project
@@ -71,4 +72,5 @@ make-*
 .library
 
 # etc
-project.Rproj # diff
+# diff
+project.Rproj

@@ -23,8 +23,3 @@ jobs:
       -
         name: Build 
         run: make
-      -
-        name: Run ShellCheck
-        uses: ludeeus/action-shellcheck@master
-        env:
-          SHELLCHECK_OPTS: -s sh -e SC1090

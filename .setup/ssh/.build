@@ -1,11 +1,14 @@
 #!/bin/bash
 
-filename="${HOME}/.ssh/id_ecdsa.pub"
-if [ -f "$filename" ];
+if command -v ssh &> /dev/null
 then
-        echo "Keys already exist and will not be overwritten."
-else
-        ssh-keygen -q -t rsa -N "" -b 4096 -C "learn.jeksterslab@gmail.com" -f "${HOME}/.ssh/id_ecdsa" <<<y >/dev/null 2>&1
+        filename="${HOME}/.ssh/id_ecdsa.pub"
+        if [ -f "$filename" ];
+        then
+                echo "Keys already exist and will not be overwritten."
+        else
+                ssh-keygen -q -t rsa -N "" -b 4096 -C "learn.jeksterslab@gmail.com" -f "${HOME}/.ssh/id_ecdsa" <<<y >/dev/null 2>&1
+        fi
 fi
 
 # https://www.ssh.com/academy/ssh/keygen

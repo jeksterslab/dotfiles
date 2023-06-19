@@ -21,5 +21,7 @@ jobs:
         name: Checkout 
         uses: actions/checkout@v3
       -
-        name: Make 
-        run: make
+        name: Build 
+        run: |
+          make
+          bash .dotfiles.sh

@@ -135,8 +135,8 @@ function job_color()
 }
 # Adds some text in the terminal frame (if applicable).
 # Now we construct the prompt.
-source ~/.bash-git-completion
-source ~/.bash-git-prompt
+. ~/.bash-git-completion
+. ~/.bash-git-prompt
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM=auto

@@ -4,5 +4,5 @@ if command -v bash &> /dev/null
 then
         echo Building ~/.bashrc
         yes 2>/dev/null | cp -rf .bash* ~
-        source ~/.bashrc > /dev/null 2>&1
+        . ~/.bashrc > /dev/null 2>&1
 fi

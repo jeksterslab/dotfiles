@@ -1,0 +1,23 @@
+name: Build dofiles
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Install packages
+        run: sudo apt-get install -y make git openssh-server tmux vim xterm 
+      -
+        name: Checkout 
+        uses: actions/checkout@v3
+      -
+        name: Make 
+        run: make

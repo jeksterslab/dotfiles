@@ -13,3 +13,7 @@ cd ~/.vim/pack/themes/start
 rm -rf dracula
 git clone https://github.com/dracula/vim.git dracula
 
+# julia
+cd ~/.vim/pack/themes/start
+rm -rf julia-vim
+git clone https://github.com/JuliaEditorSupport/julia-vim.git

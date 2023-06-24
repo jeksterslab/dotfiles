@@ -7,7 +7,7 @@ then
         then
                 echo "Keys already exist and will not be overwritten."
         else
-                ssh-keygen -q -t rsa -N "" -b 4096 -C "learn.jeksterslab@gmail.com" -f "${HOME}/.ssh/id_ecdsa" <<<y >/dev/null 2>&1
+                ssh-keygen -q -t rsa -N "" -b 4096 -C "jeksterslab@users.noreply.github.com" -f "${HOME}/.ssh/id_ecdsa" <<<y >/dev/null 2>&1
         fi
 fi
 

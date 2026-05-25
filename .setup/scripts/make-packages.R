@@ -5,7 +5,8 @@ path <- as.character(args[1])
 source(
   file.path(
     path,
-    "tools",
+    ".setup",
+    "scripts",
     "project.R"
   )
 )
@@ -41,8 +42,13 @@ if (length(pkg_github_ref) == 0) {
     ref = pkg_github_ref
   )
 }
+rProject::PkgProjectBioconductor(
+  path = path,
+  pkg = pkg_bioconductor
+)
 rProject::PkgProjectVersion(
   path = path,
   pkg = pkg_ver,
   ver = ver
 )
+warnings()

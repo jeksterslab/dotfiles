@@ -52,7 +52,3 @@ alias bat="batcat"
 #====[ R ]======================================================================
 alias R='R --quiet --no-save'
 alias r='radian --quiet --no-save'
-
-#====[ Apptainer ]==============================================================
-alias shell='apptainer shell ~/work/docs.sif'
-alias exec='apptainer exec ~/work/docs.sif'

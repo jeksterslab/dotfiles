@@ -5,15 +5,13 @@ path <- as.character(args[1])
 source(
   file.path(
     path,
-    ".setup",
-    "scripts",
+    "tools",
     "project.R"
   )
 )
 secrets_path <- file.path(
   path,
-  ".setup",
-  "scripts",
+  "tools",
   "secrets.R"
 )
 if (file.exists(secrets_path)) {
@@ -30,9 +28,6 @@ if (file.exists(secrets_path)) {
     )
   }
   writeLines(env, "~/.bash-secrets")
-  Sys.setenv(
-    GITHUB_PAT = tokens["GITHUB_PAT"]
-  )
 } else {
   message(
     paste0(
@@ -85,32 +80,12 @@ if (!("remotes" %in% pkg_installed)) {
     quiet = TRUE
   )
 }
-if (project == "rProject") {
-  if (!("rProject" %in% pkg_installed)) {
-    remotes::install_github(
-      "ijapesigan/rProject",
-      quiet = TRUE,
-      lib = dot_library_folder
-    )
-  }
-} else {
-  if (is.null(rproject_ver)) {
-    remotes::install_github(
-      "ijapesigan/rProject",
-      quiet = TRUE,
-      lib = dot_library_folder
-    )
-  } else {
-    remotes::install_github(
-      paste0(
-        "ijapesigan/rProject",
-        "@",
-        rproject_ver
-      ),
-      quiet = TRUE,
-      lib = dot_library_folder
-    )
-  }
+if (!("rProject" %in% pkg_installed)) {
+  remotes::install_github(
+    "ijapesigan/rProject",
+    quiet = TRUE,
+    lib = dot_library_folder
+  )
 }
 rProject::Project(
   path = path
@@ -132,8 +107,3 @@ rProject::BuildIgnore(
 rProject::Binary(
   path = path
 )
-rProject::License(
-  path = path,
-  type = license
-)
-warnings()

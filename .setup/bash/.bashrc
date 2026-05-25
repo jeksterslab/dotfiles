@@ -1,5 +1,5 @@
 [ -f /etc/bashrc ] && . /etc/bashrc
-[ -f ~/.bash-pfetch ] && . ~/.bash-pfetch
+[ -f ~/.bash-fastfetch ] && . ~/.bash-fastfetch
 [ -f ~/.bash-aliases ] && . ~/.bash-aliases
 [ -f ~/.bash-path ] && . ~/.bash-path
 [ -f ~/.bash-prompt ] && . ~/.bash-prompt

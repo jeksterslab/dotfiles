@@ -15,9 +15,7 @@
 *-Ex.R
 
 # Output files from R CMD build
-# /*.tar.gz
-# allow package build to be version controlled
-!/*.tar.gz
+/*.tar.gz
 
 # Output files from R CMD check
 /*.Rcheck/
@@ -52,9 +50,9 @@ vignettes/*.pdf
 .Rprofile
 
 # pkgdown site
-pkgdown/
-docs/
-doc/
+/pkgdown/
+/docs/
+/doc/
 
 # translation temp files
 po/*~
@@ -77,7 +75,14 @@ detritus
 # library
 .library
 
-# etc
-# diff
-.Rbuildignore
-project.Rproj
+# README
+README.html
+README_files/
+
+# latex
+latexmkrc
+
+# Rcpp
+src/*.o
+src/*.so
+src/*.dll

@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if command -v git &> /dev/null
-then
-        git config --global user.email "learn.jeksterslab@gmail.com"
-        git config --global user.name "jeksterslab"
-fi
